@@ -57,7 +57,7 @@ void Base58::toHash160(const std::string &s, unsigned int hash[5])
 bool Base58::isBase58(std::string s)
 {
 	for(unsigned int i = 0; i < s.length(); i++) {
-		if(BASE58_STRING.find(s[i]) < 0) {
+		if(BASE58_STRING.find(s[i]) == std::string::npos) {
 			return false;
 		}
 	}
